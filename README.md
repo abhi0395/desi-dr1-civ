@@ -23,7 +23,10 @@ DESI DR1 Data Availability
 
 DESI DR1 is publicly available at: [https://data.desi.lbl.gov/doc/releases/dr1/](https://data.desi.lbl.gov/doc/releases/dr1/)
 
-In case, you have any suggestion or question, feel free to raise a ticket. I will certainly have a look and try to resolve it.
+Suggestions or Questions
+--------------------------
+
+If you have any suggestions or questions, feel free to open an issue. I’ll be happy to take a look and try to resolve it.
 
 
 Thanks,                                                                                              
