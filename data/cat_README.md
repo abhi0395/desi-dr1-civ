@@ -26,8 +26,8 @@ This HDU contains information on detected **CIV absorbers**.
 | `CORRECTED_N`        | *(float)*        | Completeness-corrected absorber count. |
 | `LOG10N`             | *(float)*        | log of **total column density** (in cm<sup>-2</sup>), calculated from apparent optical depth method. |
 | `SIG_LOG10N`         | *(float)*        | uncertainty on log of **total column density** (in cm<sup>-2</sup>), calculated from apparent optical depth method. |
-| `SATURATION`         | *(int)*          | saturation flag, 1: saturated, 0: unsaturated  |
-| `fN`                 | *(int)*          | Column density measurement method, 1: weighted mean, 2: only first line, 3: only second line, -1: failure. |
+| `SATURATION`         | *(int)*          | saturation flat, 1: saturated, 0: unsaturated  |
+| `fN`                 | *(int)*          | Column density measurement method, 1: WEIGHTED MEAN, 2: FIRST, 3: SECOND, 4: Corrected λ1550 (partial saturation), 5: Lower limit from λ1550 (strong saturation), 6: Lower limit from λ1548 (strong saturation and 1550 is not available) -1: FAIL. |
 
 ---
 
@@ -37,8 +37,8 @@ This HDU contains **metadata** related to the observed quasars.
 | **Keyword**   | **Type**       | **Description** |
 |--------------|---------------|----------------|
 | `LOS_ID`     | *(int)*        | Line-of-sight (LOS) ID in **picca continuum modeling** (**same as TARGETID**). |
-| `RA`         | *(float)*      | **Right Ascension** of quasars (°). |
-| `DEC`        | *(float)*      | **Declination** of quasars (°). |
+| `RA`         | *(float)*      | **Right Ascension** of quasars (degrees). |
+| `DEC`        | *(float)*      | **Declination** of quasars (degrees). |
 | `Z_QSO`      | *(float)*      | Redshift of quasars. |
 | `MEANSNR`    | *(float)*      | **Mean signal-to-noise ratio** of the quasar spectrum from picca. |
 | `TARGETID`   | *(int)*        | **DESI unique identifier** for each object. |
@@ -47,6 +47,7 @@ This HDU contains **metadata** related to the observed quasars.
 | `HPXPIXEL`   | *(int)*        | **Healpix ID** for the spectrum, do HPXPIXEL//100 to get the healpix directory name. |
 | `ZQSO_ERR`   | *(float)*      | Error on **quasar redshift**. |
 | `TSNR2_LRG`  | *(float)*      | Template signal-to-noise ratio for each quasar. Can be used to calculate effective exposure time, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
+| `EFFTIME`  | *(float)*      | Effective exposure time in seconds, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
 
 ---
 
@@ -57,8 +58,10 @@ This HDU contains **metadata** related to the observed quasars.
   
 - **Velocity dispersions (VDISP)** are corrected for instrumental resolution and given in **km/s**.
   
-- In version `qsoabsfind/v1.0.3` (used to construct the original catalog), a small bug affected the estimation of velocity dispersion — specifically, the instrumental resolution was underestimated by a factor of 2.355. All **VDISP** values have been recomputed in the current catalog using the correct resolution. As a result, ~3% of systems now have **VDISP = 0**, indicating unresolved lines. Most of these are visually confirmed to be genuine absorbers and are therefore retained in the catalog and analysis.
-
+- In version `qsoabsfind/v1.0.3` (used to construct the original catalog), a small bug affected the estimation of velocity dispersion — specifically, the instrumental resolution was underestimated by a factor of 2.355. All **VDISP** values have been recomputed in the current catalog using the correct resolution. As a result, <3.5% of systems now have **VDISP = 0**, indicating unresolved lines. Most of these are visually confirmed to be genuine absorbers and are therefore retained in the catalog and analysis.
+  
 - This bug has been fixed in `qsoabsfind/v1.0.5`, and any future catalogs built from `version >= v1.0.5` will automatically have to correct velocity dispersions for the lines.
+  
+- Column densities are measured using the Apparent Optical Depth Method (AODM; [Savage & Sembach 1991](https://ui.adsabs.harvard.edu/abs/1991ApJ...379..245S/abstract)).
 
-- **For any issues or questions, please refer to Anand et al. 2025 (arXiv:).** 
+- **For any issues or questions, please refer to Anand et al. 2025 ([arXiv: 2504.20299](https://arxiv.org/abs/2504.20299)).** 
