@@ -72,5 +72,7 @@ This HDU contains **metadata** related to the observed quasars.
 - This bug has been fixed in `qsoabsfind/v1.0.5`, and any future catalogs built from `version >= v1.0.5` will automatically have correct velocity dispersions for the lines.
   
 - Column densities are measured using the Apparent Optical Depth Method (AODM; [Savage & Sembach 1991](https://ui.adsabs.harvard.edu/abs/1991ApJ...379..245S/abstract)).
-  
+
+### **Contact**
+
 - Please write to abhijeetanand2011@gmail.com, if you have questions.
