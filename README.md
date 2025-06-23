@@ -1,7 +1,7 @@
 DESI DR1 CIV Absorber Catalog
 =============================
 
-Catalog of **triply ionized carbon (CIV)** absorbers based on DESI DR1 Quasars. This repo also includes the catalog file for **DESI DR1 Quasars** that were searched for CIV absorbers.. 
+Catalog of **triply ionized carbon (CIV)** absorbers based on DESI DR1 Quasars. This repo also includes the catalog file for **DESI DR1 Quasars** that were searched for CIV absorbers. 
 
 Documentation
 -------------
@@ -16,12 +16,20 @@ A [jupyter notebook](https://github.com/abhi0395/desi-dr1-civ/blob/main/notebook
 Citation
 --------
 
-The catalog construction and data details can be found in **[Anand et al. 2025](https://ui.adsabs.harvard.edu/abs/2025arXiv250420299A/abstract)**. Please cite the paper if you use this catalog in your research. The BibTeX entry for the paper can be found [here](https://ui.adsabs.harvard.edu/abs/2025arXiv250420299A/exportcitation).
+The catalog construction and data details can be found in [Anand et al. 2025](https://ui.adsabs.harvard.edu/abs/2025arXiv250420299A/abstract). Please cite the paper if you use this catalog in your research. The BibTeX entry for the paper can be found [here](https://ui.adsabs.harvard.edu/abs/2025arXiv250420299A/exportcitation). 
+
+The **codebase** used to build this catalog can be found here: [qsoabsfind](https://github.com/abhi0395/qsoabsfind).
+
+If you use this catalog, please also cite the codebase via Zenodo: [zenodo.org/records/15685771](https://zenodo.org/records/15685771).
+
 
 DESI DR1 Data Availability
 --------------------------
 
 DESI DR1 is publicly available at: [https://data.desi.lbl.gov/doc/releases/dr1/](https://data.desi.lbl.gov/doc/releases/dr1/)
+
+This catalog is also officially part of the **Value-Added Catalogs (VACs)** of the **DESI DR1** database and can be downloaded from: [DESI DR1 VACs](https://data.desi.lbl.gov/doc/releases/dr1/#value-added-catalogs).
+
 
 Suggestions or Questions
 --------------------------
