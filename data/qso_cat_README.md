@@ -11,33 +11,22 @@ This file contains the details of **DESI DR1 Quasars** that were searched for **
 
 ## Data Model
 
-| **Name**           | **Type**         | **Units** | **Description** |
-|--------------------|------------------|-----------|-----------------|
-| `TARGETID`         | int64            | —         | Unique DESI target ID |
-| `Z`                | float64          | —         | quasar redshift |
-| `ZERR`             | float64          | —         | Estimated error on updated redshift |
-| `ZWARN`            | int64            | —         | Redshift warning bitmask for updated redshift ([see ZWARN docs](https://github.com/desihub/redrock/blob/main/py/redrock/zwarning.py)) |
-| `CHI2`             | float64          | —         | Chi-squared of template fit at best-fit redshift |
-| `COEFF`            | float64[4]       | —         | Coefficients of updated QSO-HIZ for best fit |
-| `NPIXELS`          | int64            | —         | Number of input pixels (wavelengths) included in fit |
-| `TARGET_RA`        | float64          | deg       | Right Ascension in decimal degrees (J2000) |
-| `TARGET_DEC`       | float64          | deg       | Declination in decimal degrees (J2000) |
-| `DESI_TARGET`      | int64            | —         | DESI target selection bitmask |
-| `HPXPIXEL`         | int64            | —         | HEALPixel containing target at HPXNSIDE |
-| `SURVEY`           | string           | —         | Survey name (e.g., `"main"`) |
-| `PROGRAM`          | string           | —         | Program name (e.g., `"dark"`) |
-| `BI_CIV`           | float64          | km/s      | Equivalent width of CIV absorption by Balnicity Index (BI) definition |
-| `ERR_BI_CIV`       | float64          | km/s      | Uncertainty in `BI_CIV`; infinity indicates a potentially problematic fit |
-| `NCIV_2000`        | int64            | —         | Number of CIV absorption troughs extending >2000 km/s |
-| `VMIN_CIV_2000`    | float64[5]       | km/s      | Minimum velocity of BI absorption troughs blueward of CIV |
-| `VMAX_CIV_2000`    | float64[5]       | km/s      | Maximum velocity of BI absorption troughs blueward of CIV |
-| `AI_CIV`           | float64          | km/s      | Equivalent width of CIV absorption by Absorption Index (AI) definition |
-| `ERR_AI_CIV`       | float64          | km/s      | Uncertainty in `AI_CIV`; infinity indicates a potentially problematic fit |
-| `NCIV_450`         | int64            | —         | Number of CIV absorption troughs extending >450 km/s |
-| `VMIN_CIV_450`     | float64[17]      | km/s      | Minimum velocity of AI absorption troughs blueward of CIV |
-| `VMAX_CIV_450`     | float64[17]      | km/s      | Maximum velocity of AI absorption troughs blueward of CIV |
-| `ZMASK`            | float64          | —         | Redshift after masking AI_CIV > 0 BAL features |
-| `MEANSNR`            | float64          | —         | Mean signal-to-noise ratio for quasars from continuum modeling |
+| **Keyword**   | **Type**       | **Units**        | **Description** |
+|--------------|----------------|------------------|-----------------|
+| `LOS_ID`     | *(int64)*       | —                | Line-of-sight (LOS) ID in **picca continuum modeling** (**same as TARGETID**). |
+| `RA`         | *(float64)*     | degrees          | **Right Ascension** of quasars (degrees). |
+| `DEC`        | *(float64)*     | degrees          | **Declination** of quasars (degrees). |
+| `Z_QSO`      | *(float64)*     | —                | Redshift of quasars. |
+| `MEANSNR`    | *(float64)*     | —                | **Mean signal-to-noise ratio** of the quasar spectrum from picca. |
+| `TARGETID`   | *(int64)*       | —                | **DESI unique identifier** for each object. |
+| `SURVEY`     | *(str32)*       | —                | **Survey name** in which the object was observed. |
+| `PROGRAM`    | *(str32)*       | —                | **Program name** in which the object was observed. |
+| `HPXPIXEL`   | *(int64)*       | —                | **Healpix ID** for the spectrum, do HPXPIXEL//100 to get the healpix directory name. |
+| `ZQSO_ERR`   | *(float64)*     | —                | Error on **quasar redshift**. |
+| `TSNR2_LRG`  | *(float32)*     | —                 | Template signal-to-noise ratio for each quasar. Can be used to calculate effective exposure time, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
+| `EFFTIME`    | *(float32)*     | seconds          | Effective exposure time in seconds, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
+
+
 ### **Contact**
 
 - Please write to abhijeetanand2011@gmail.com, if you have questions.

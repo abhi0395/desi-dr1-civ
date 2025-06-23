@@ -6,7 +6,7 @@ Catalog of **triply ionized carbon (CIV)** absorbers based on DESI DR1 Quasars. 
 Documentation
 -------------
 
-Please read `data/cat_README.md` for the details on the CIV absorber catalog, and `data/qso_cat_README.md` for details on parent quasar catalog. 
+Please read `data/CIV_cat_README.md` for the details on the CIV absorber catalog, and `data/qso_cat_README.md` for details on parent quasar catalog. 
 
 Notebook
 --------
