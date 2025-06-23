@@ -11,6 +11,9 @@ This file contains the details of **DESI DR1 Quasars** that were searched for **
 
 ## Data Model
 
+## HDU1: METADATA
+This HDU contains information on parent quasars.
+
 | **Keyword**   | **Type**       | **Units**        | **Description** |
 |--------------|----------------|------------------|-----------------|
 | `LOS_ID`     | *(int64)*       | —                | Line-of-sight (LOS) ID in **picca continuum modeling** (**same as TARGETID**). |
