@@ -20,7 +20,7 @@ The catalog construction and data details can be found in [Anand et al. 2025](ht
 
 The **codebase** used to build this catalog can be found here: [qsoabsfind](https://github.com/abhi0395/qsoabsfind).
 
-If you use this catalog, please also cite the codebase via Zenodo: [zenodo.org/records/15685771](https://zenodo.org/records/15685771).
+If you use this catalog, please also cite the codebase via Zenodo: [zenodo.org/records/15685771](https://zenodo.org/records/15685771) and the associated paper at [Anand et al. 2021](https://ui.adsabs.harvard.edu/abs/2021MNRAS.504...65A/exportcitation).
 
 
 DESI DR1 Data Availability
