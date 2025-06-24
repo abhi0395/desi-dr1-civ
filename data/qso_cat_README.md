@@ -3,6 +3,7 @@
 This file contains the details of **DESI DR1 Quasars** that were searched for **CIV absorbers**.
 
 - **QSO Catalog Filename**: `dr1-QSO_healpix_cat_for_CIV_search.fits`
+
     This is the DESI DR1 QSO catalog file. It contains 94,986 unique Quasars that were searched for CIV absorbers. The full datamodel for the catalog is below:
 
 - **Citation**: If you use this catalog in your work, please cite [Anand et al. 2025](https://arxiv.org/abs/2504.20299). The paper describes the methodology, completeness, and limitations.
