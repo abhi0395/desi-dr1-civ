@@ -5,7 +5,7 @@ This file contains the details of **C IV absorbers** (a doublet at rest-frame 
 - **Absorber Catalog Filename**: `CIV_healpix-dr1-cat-v1.fits`
     This is the CIV absorber catalog file. It contains 32,321 CIV absorber systems detected in 94,986 Quasars from DESI DR1. Each entry corresponds to a detected absorber, with columns described in the data model below. Note that `TARGETID` is not a unique identifier, as multiple absorbers can be found along the line of sight to a single target. To uniquely specify an absorber, use the combination of TARGETID and `Z_ABS`.
 
-- **Citation**: If you use this catalog in your work, please cite [Anand et al. 2025](https://arxiv.org/abs/2504.20299). The paper describes the methodology, completeness, and limitations.
+- **Citation**: If you use this catalog in your work, please cite [Anand et al. 2025](https://arxiv.org/abs/2504.20299) and [Anand et al. 2021](https://arxiv.org/abs/2103.15842). These two papers describe the methodology, completeness, and limitations.
 
 - **Codebase**: The pipeline used to generate this catalog is open source and available at: [https://github.com/abhi0395/qsoabsfind](https://github.com/abhi0395/qsoabsfind)
 
