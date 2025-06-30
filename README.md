@@ -16,11 +16,11 @@ A [jupyter notebook](https://github.com/abhi0395/desi-dr1-civ/blob/main/notebook
 Citation
 --------
 
-The catalog construction and data details can be found in [Anand et al. 2025](https://ui.adsabs.harvard.edu/abs/2025arXiv250420299A/abstract). Please cite the paper if you use this catalog in your research. The BibTeX entry for the paper can be found [here](https://ui.adsabs.harvard.edu/abs/2025arXiv250420299A/exportcitation). 
+The catalog construction and data details can be found in [Anand et al. 2025](https://ui.adsabs.harvard.edu/abs/2025arXiv250420299A/abstract). Please cite the paper if you use this catalog in your research. The BibTeX entry for the paper can be found [here](https://ui.adsabs.harvard.edu/abs/2025arXiv250420299A/exportcitation). Additionally, please cite [Anand et al. 2021](https://ui.adsabs.harvard.edu/abs/2021MNRAS.504...65A/exportcitation), which first developed this algorithm.
 
 The **codebase** used to build this catalog can be found here: [qsoabsfind](https://github.com/abhi0395/qsoabsfind).
 
-If you use this catalog, please also cite the codebase via Zenodo: [zenodo.org/records/15685771](https://zenodo.org/records/15685771) and the associated paper at [Anand et al. 2021](https://ui.adsabs.harvard.edu/abs/2021MNRAS.504...65A/exportcitation).
+Please also cite the codebase via Zenodo: [zenodo.org/records/15685771](https://zenodo.org/records/15685771).
 
 
 DESI DR1 Data Availability
