@@ -3,10 +3,10 @@ DESI DR1 CIV Absorber Catalog
 
 Catalog of **triply ionized carbon (CIV)** absorbers based on DESI DR1 Quasars. This repo also includes the catalog file for **DESI DR1 Quasars** that were searched for CIV absorbers. 
 
-Documentation
+## Data & Documentation
 -------------
 
-Please read `data/CIV_cat_README.md` for the details on the CIV absorber catalog, and `data/qso_cat_README.md` for details on parent quasar catalog. 
+The FITS files containing the **C IV absorbers** and the **parent quasar sample** are stored in the `data/` folder. For details on the structure and contents of the **C IV absorber catalog** and the **quasar catalog searched for absorbers**, please refer to [`data/README.md`](data/README.md).
 
 Notebook
 --------
