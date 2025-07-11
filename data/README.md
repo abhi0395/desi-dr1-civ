@@ -2,19 +2,37 @@
 
 This file contains the details of **C IV absorbers** (a doublet at rest-frame wavelengths 1548 and 1550 Å) detected in **DESI DR1 quasar spectra**.
 
-- **Absorber Catalog Filename**: `CIV_healpix-dr1-cat-v1.fits`
+## Data Access
 
+- **Data URL:** [https://data.desi.lbl.gov/public/dr1/vac/dr1/civ-absorber/v1/](https://data.desi.lbl.gov/public/dr1/vac/dr1/civ-absorber/v1/)
+  
+- **NERSC Access:** `/global/cfs/cdirs/desi/public/dr1/vac/dr1/civ-absorber/v1/`
+
+- **GitHub URL:** [https://github.com/abhi0395/desi-dr1-civ](https://github.com/abhi0395/desi-dr1-civ)
+
+## Documentation
+
+- ### List of Files
+
+  - **Absorber Catalog Filename**: `CIV_healpix-dr1-cat-v1.fits`  
     This is the CIV absorber catalog file. It contains 32,321 CIV absorber systems detected in 94,986 Quasars from DESI DR1. Each entry corresponds to a detected absorber, with columns described in the data model below. Note that `TARGETID` is not a unique identifier, as multiple absorbers can be found along the line of sight to a single target. To uniquely specify an absorber, use the combination of TARGETID and `Z_ABS`.
+  
+  - **QSO Catalog Filename**: `dr1-QSO_healpix_cat_for_CIV_search.fits`  
+    This is the DESI DR1 QSO catalog file. It contains 94,986 unique Quasars that were searched for CIV absorbers.
 
 - **Citation**: If you use this catalog in your work, please cite [Anand et al. 2025](https://arxiv.org/abs/2504.20299) and [Anand et al. 2021](https://arxiv.org/abs/2103.15842). These two papers describe the methodology, completeness, and limitations.
 
-- **Codebase**: The pipeline used to generate this catalog is open source and available at: [https://github.com/abhi0395/qsoabsfind](https://github.com/abhi0395/qsoabsfind)
+- **Codebase**: The pipeline used to generate this catalog is open source and available at: [GitHub/qsoabsfind](https://github.com/abhi0395/qsoabsfind)
+
+- **Notebook**: An example notebook with some preliminarly reading and absorber properties visualization is available at: [example notebook](https://github.com/abhi0395/desi-dr1-civ/blob/main/notebooks/catalog_analysis.ipynb)
 
 - Please see the **data model and column descriptions** below for details on the catalog format. There are also some **important usage notes** at the end that users should review before using the catalog.
   
 ---
 
-## **HDU1: ABSORBER**
+### Data Model for `CIV_healpix-dr1-cat-v1.fits`
+
+### **HDU1: ABSORBER**
 This HDU contains information on detected **CIV absorbers**.
 
 | **Keyword**           | **Type**         | **Units**      | **Description** |
@@ -41,7 +59,7 @@ This HDU contains information on detected **CIV absorbers**.
 
 ---
 
-## **HDU2: METADATA**
+### **HDU2: METADATA**
 This HDU contains **metadata** related to the observed quasars.
 
 | **Keyword**   | **Type**       | **Units**        | **Description** |
@@ -61,7 +79,29 @@ This HDU contains **metadata** related to the observed quasars.
 
 ---
 
-### **Notes**
+### Data Model for `dr1-QSO_healpix_cat_for_CIV_search.fits`
+
+### HDU1: METADATA
+This HDU contains information on parent quasars.
+
+| **Keyword**   | **Type**       | **Units**        | **Description** |
+|--------------|----------------|------------------|-----------------|
+| `LOS_ID`     | *(int64)*       | —                | Line-of-sight (LOS) ID in **picca continuum modeling** (**same as TARGETID**). |
+| `RA`         | *(float64)*     | degrees          | **Right Ascension** of quasars (degrees). |
+| `DEC`        | *(float64)*     | degrees          | **Declination** of quasars (degrees). |
+| `Z_QSO`      | *(float64)*     | —                | Redshift of quasars. |
+| `MEANSNR`    | *(float64)*     | —                | **Mean signal-to-noise ratio** of the quasar spectrum from picca. |
+| `TARGETID`   | *(int64)*       | —                | **DESI unique identifier** for each object. |
+| `SURVEY`     | *(str32)*       | —                | **Survey name** in which the object was observed. |
+| `PROGRAM`    | *(str32)*       | —                | **Program name** in which the object was observed. |
+| `HPXPIXEL`   | *(int64)*       | —                | **Healpix ID** for the spectrum, do HPXPIXEL//100 to get the healpix directory name. |
+| `ZQSO_ERR`   | *(float64)*     | —                | Error on **quasar redshift**. |
+| `TSNR2_LRG`  | *(float32)*     | —                 | Template signal-to-noise ratio for each quasar. Can be used to calculate effective exposure time, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
+| `EFFTIME`    | *(float32)*     | seconds          | Effective exposure time in seconds, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
+
+
+
+### **Notes on Absorber Catalog**
 - This catalog is based on **DESI DR1 Quasars** and contains CIV absorbers identified in the spectra.
   
 - Rest-frame equivalent widths (EWs) are measured in **Angstroms (Å)**.
