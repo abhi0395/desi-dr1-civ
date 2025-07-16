@@ -4,9 +4,9 @@ This file contains the details of **C IV absorbers** (a doublet at rest-frame 
 
 ## Data Access
 
-- **Data URL:** [https://data.desi.lbl.gov/public/dr1/vac/dr1/civ-absorber/v1/](https://data.desi.lbl.gov/public/dr1/vac/dr1/civ-absorber/v1/)
+- **Data URL:** [https://data.desi.lbl.gov/public/dr1/vac/dr1/civ-absorber/v1.0/](https://data.desi.lbl.gov/public/dr1/vac/dr1/civ-absorber/v1.0/)
   
-- **NERSC Access:** `/global/cfs/cdirs/desi/public/dr1/vac/dr1/civ-absorber/v1/`
+- **NERSC Access:** `/global/cfs/cdirs/desi/public/dr1/vac/dr1/civ-absorber/v1.0/`
 
 - **GitHub URL:** [https://github.com/abhi0395/desi-dr1-civ](https://github.com/abhi0395/desi-dr1-civ)
 
@@ -75,7 +75,7 @@ This HDU contains **metadata** related to the observed quasars.
 | `HPXPIXEL`   | *(int64)*       | —                | **Healpix ID** for the spectrum, do HPXPIXEL//100 to get the healpix directory name. |
 | `ZQSO_ERR`   | *(float64)*     | —                | Error on **quasar redshift**. |
 | `TSNR2_LRG`  | *(float32)*     | —                 | Template signal-to-noise ratio for each quasar. Can be used to calculate effective exposure time, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
-| `EFFTIME`    | *(float32)*     | seconds          | Effective exposure time in seconds, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
+| `EFFTIME`    | *(float32)*     | s          | Effective exposure time in seconds, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
 
 ---
 
@@ -97,7 +97,7 @@ This HDU contains information on parent quasars.
 | `HPXPIXEL`   | *(int64)*       | —                | **Healpix ID** for the spectrum, do HPXPIXEL//100 to get the healpix directory name. |
 | `ZQSO_ERR`   | *(float64)*     | —                | Error on **quasar redshift**. |
 | `TSNR2_LRG`  | *(float32)*     | —                 | Template signal-to-noise ratio for each quasar. Can be used to calculate effective exposure time, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
-| `EFFTIME`    | *(float32)*     | seconds          | Effective exposure time in seconds, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
+| `EFFTIME`    | *(float32)*     | s          | Effective exposure time in seconds, T<sub>eff</sub> = 12.15 x TSNR2\_LRG. |
 
 
 
