@@ -11,7 +11,7 @@ The FITS files containing the **C IV absorbers** and the **parent quasar sampl
 Notebook
 --------
 
-A [jupyter notebook](https://github.com/abhi0395/desi-dr1-civ/blob/main/notebooks/catalog_analysis.ipynb) is also provided with some basic functions to explore the catalog.
+Two [Jupyter notebooks](https://github.com/abhi0395/desi-dr1-civ/blob/main/notebooks/) are also provided with basic functions to explore the **C IV absorber** and **parent QSO** catalogs.
 
 Citation
 --------
@@ -28,8 +28,7 @@ DESI DR1 Data Availability
 
 DESI DR1 is publicly available at: [https://data.desi.lbl.gov/doc/releases/dr1/](https://data.desi.lbl.gov/doc/releases/dr1/)
 
-This catalog is also officially part of the **Value-Added Catalogs (VACs)** of the **DESI DR1** database and can be downloaded from: [DESI DR1 VACs](https://data.desi.lbl.gov/doc/releases/dr1/#value-added-catalogs).
-
+This catalog is also officially part of the **Value-Added Catalogs (VACs)** of the **DESI DR1** database and can be downloaded from: [DESI DR1 CIV VAC](https://data.desi.lbl.gov/doc/releases/dr1/vac/civ-absorber/).
 
 Suggestions or Questions
 --------------------------

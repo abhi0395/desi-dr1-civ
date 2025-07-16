@@ -14,23 +14,23 @@ This file contains the details of **C IV absorbers** (a doublet at rest-frame 
 
 - ### List of Files
 
-  - **Absorber Catalog Filename**: `CIV_healpix-dr1-cat-v1.fits`  
+  - **Absorber Catalog Filename**: `CIV-Absorbers-dr1-v1.0.fits`  
     This is the CIV absorber catalog file. It contains 32,321 CIV absorber systems detected in 94,986 Quasars from DESI DR1. Each entry corresponds to a detected absorber, with columns described in the data model below. Note that `TARGETID` is not a unique identifier, as multiple absorbers can be found along the line of sight to a single target. To uniquely specify an absorber, use the combination of TARGETID and `Z_ABS`.
   
-  - **QSO Catalog Filename**: `dr1-QSO_healpix_cat_for_CIV_search.fits`  
-    This is the DESI DR1 QSO catalog file. It contains 94,986 unique Quasars that were searched for CIV absorbers.
+  - **QSO Catalog Filename**: `CIV-Absorbers-parent-QSO-dr1-v1.0.fits`  
+    This is the DESI DR1 QSO catalog file. It contains 94,986 unique Quasars that were searched for CIV absorbers. The quasars were selected from the _healpix-based DESI DR1 quasar catalog_. A full description of the selection procedure is provided in the catalog paper.
 
 - **Citation**: If you use this catalog in your work, please cite [Anand et al. 2025](https://arxiv.org/abs/2504.20299) and [Anand et al. 2021](https://arxiv.org/abs/2103.15842). These two papers describe the methodology, completeness, and limitations.
 
 - **Codebase**: The pipeline used to generate this catalog is open source and available at: [GitHub/qsoabsfind](https://github.com/abhi0395/qsoabsfind)
 
-- **Notebook**: An example notebook with some preliminarly reading and absorber properties visualization is available at: [example notebook](https://github.com/abhi0395/desi-dr1-civ/blob/main/notebooks/catalog_analysis.ipynb)
+- **Notebooks**: Two example notebooks with preliminary visualizations of the **parent quasar** and **absorber** properties are available here: [notebooks/](https://github.com/abhi0395/desi-dr1-civ/blob/main/notebooks)
 
 - Please see the **data model and column descriptions** below for details on the catalog format. There are also some **important usage notes** at the end that users should review before using the catalog.
   
 ---
 
-### Data Model for `CIV_healpix-dr1-cat-v1.fits`
+### Data Model for `CIV-Absorbers-dr1-v1.0.fits`
 
 ### **HDU1: ABSORBER**
 This HDU contains information on detected **CIV absorbers**.
@@ -79,7 +79,7 @@ This HDU contains **metadata** related to the observed quasars.
 
 ---
 
-### Data Model for `dr1-QSO_healpix_cat_for_CIV_search.fits`
+### Data Model for `CIV-Absorbers-parent-QSO-dr1-v1.0.fits`
 
 ### HDU1: METADATA
 This HDU contains information on parent quasars.
